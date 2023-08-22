@@ -1,0 +1,44 @@
+footer {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  padding: 20px 20px 40px 20px;
+  color: #1d232c;
+
+  h1 {
+    font-size: 16px;
+  }
+
+  a {
+    color: #586a84;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+  }
+
+  .columns {
+    display: flex;
+    justify-content: space-between;
+
+    & > ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      a:hover {
+        color: #319dff;
+      }
+    }
+
+    .info_column {
+      .footer-logo {
+        svg {
+          max-width: 150px !important;
+        }
+      }
+
+      li {
+        line-height: 10px;
+      }
+    }
+  }
+}

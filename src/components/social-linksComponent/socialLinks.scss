@@ -1,0 +1,32 @@
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+
+    a {
+      color: #808080;
+      transition: color 0.2s ease;
+    }
+
+    &:nth-child(1):hover a {
+      color: royalblue;
+    }
+    &:nth-child(2):hover a {
+      color: red;
+    }
+    &:nth-child(3):hover a {
+      color: rgb(4, 112, 253);
+    }
+    &:nth-child(4):hover a {
+      color: rgb(0, 152, 240);
+    }
+    &:nth-child(5):hover a {
+      color: red;
+    }
+  }
+}

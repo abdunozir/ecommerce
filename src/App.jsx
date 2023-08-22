@@ -1,9 +1,12 @@
 import "./assets/styles/index.scss";
+import { Header, Footer } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <h1>every thing is up to date</h1>
+      <Header />
+      <h1>...</h1>
+      <Footer />
     </div>
   );
 }
