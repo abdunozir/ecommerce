@@ -1,0 +1,99 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  transition: 1s;
+  width: 2em !important;
+  border-radius: 1em !important;
+}
+
+.hero_carousel_wrapper {
+  font-size: 15px;
+  width: auto;
+  background: linear-gradient(225deg, #f2fff7 0%, #c3f4ff 100%);
+}
+
+.hero_carousel {
+  width: 100%;
+  min-height: 600px;
+  background-position: right;
+  background-size: 60em 40em;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero_carousel p {
+  padding-left: 1em;
+  width: 40%;
+  color: #1d232c;
+  font-family: Roboto;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.hero_carousel p span {
+  color: #1d232c;
+  font-family: Roboto;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+// mediaquery
+
+@include mediaQueries(1340px) {
+  .hero_carousel_wrapper {
+    font-size: 15px;
+    padding: 0;
+  }
+}
+@include mediaQueries(1320px) {
+  .hero_carousel_wrapper {
+    font-size: 13px;
+  }
+}
+@include mediaQueries(1061px) {
+  .hero_carousel_wrapper {
+    font-size: 12px;
+  }
+}
+@include mediaQueries($xl) {
+  .hero_carousel_wrapper {
+    font-size: 11px;
+  }
+}
+@include mediaQueries($xl) {
+  .hero_carousel_wrapper {
+    font-size: 9px;
+  }
+}
+@include mediaQueries($md) {
+  .hero_carousel_wrapper {
+    font-size: 7px;
+  }
+}
+@include mediaQueries($sm) {
+  .hero_carousel_wrapper {
+    font-size: 6px;
+  }
+  .hero_carousel {
+    background-position: top;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .hero_carousel p {
+    width: auto;
+    font-size: 4.5em;
+    padding-left: 0;
+    text-align: center;
+  }
+}
