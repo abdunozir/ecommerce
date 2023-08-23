@@ -13,50 +13,30 @@
   .option-bar {
     display: flex;
     align-items: center;
+    gap: 5px;
 
-    div {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      border-right: 1px solid #eef0f4;
+    .select-box {
       position: relative;
-
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: #319dff;
-
-        select {
-          color: #319dff;
-        }
-      }
+      padding: 0 0 0 20px;
+      border-right: 1px solid #e6e6e6;
 
       span {
         position: absolute;
-        left: 10px;
-        top: 1px;
+        left: 5px;
+        top: 2px;
       }
 
-      select {
-        border: none;
-        color: #808080;
+      div {
+        padding: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
 
-        transition: color 0.2s ease;
-      }
-
-      &:first-child {
-        padding: 0 24px 0 12px;
-        span {
-          left: 0;
+        ul {
+          border-radius: 0 !important;
         }
-      }
 
-      &:last-child {
-        padding: 0px 12px 0 36px;
-        span {
-          font-size: 15px;
-          top: 0;
-          left: 22px;
+        h1 {
+          padding: 0 24px 0 0 !important;
         }
       }
     }

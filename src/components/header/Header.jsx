@@ -6,8 +6,11 @@ import { HiShoppingBag } from "react-icons/hi";
 
 import HeaderTop from "./HeaderTop";
 import Categories from "./Categories";
+import { SelectComponent } from "../";
 
 const Header = () => {
+  const searchSelectValues = ["All Values"];
+
   return (
     <header>
       <HeaderTop />
@@ -82,9 +85,7 @@ const Header = () => {
           <div className="search-box">
             <input type="search" placeholder="Search for products" />
             <div className="select-box">
-              <select value="all">
-                <option value="all">All Categories</option>
-              </select>
+              <SelectComponent options={searchSelectValues} />
             </div>
             <button className="search-btn">
               <BiSearch />

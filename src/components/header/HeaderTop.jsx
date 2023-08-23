@@ -5,8 +5,14 @@ import { FaLocationDot, FaBars } from "react-icons/fa6";
 import { BiSolidDollarCircle } from "react-icons/bi";
 import { SocialLinks } from "../index";
 import { BsGlobe } from "react-icons/bs";
+import { SelectComponent } from "../";
 
 const HeaderTop = () => {
+  const topSelectValues = [
+    ["Language", "uz", "ru", "en"],
+    ["Currency", "$"],
+  ];
+
   return (
     <div className="top">
       <div className="container">
@@ -15,20 +21,13 @@ const HeaderTop = () => {
             <span>
               <BsGlobe />
             </span>
-            <select value="default">
-              <option value="default">Language</option>
-              <option value="val1">uz</option>
-              <option value="val1">ru</option>
-              <option value="val1">en</option>
-            </select>
+            <SelectComponent options={topSelectValues[0]} />
           </div>
           <div className="select-box">
             <span>
               <BiSolidDollarCircle />
             </span>
-            <select>
-              <option value="lan">Currency</option>
-            </select>
+            <SelectComponent options={topSelectValues[1]} />
           </div>
         </div>
 
