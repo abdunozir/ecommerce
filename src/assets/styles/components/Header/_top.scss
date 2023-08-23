@@ -83,6 +83,14 @@
   }
 }
 
+@media (max-width: $xl) {
+  .select-box {
+    span {
+      left: -3px !important;
+    }
+  }
+}
+
 @media (max-width: $md) {
   .right-side {
     .top-bar-btn {
