@@ -1,15 +1,29 @@
 import "./assets/styles/index.scss";
-import { Header, Footer } from "./components";
+import { Home, Shop } from "./pages";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Layout } from "./components";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/shop",
+          element: <Shop />,
+        },
+      ],
+    },
+  ]);
   return (
-    <div className="App">
-      <Header />
-      <div style={{ minHeight: "100vh" }}>
-        <h1>every thing is up to date</h1>
-      </div>
-      <Footer />
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 

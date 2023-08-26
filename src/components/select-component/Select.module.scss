@@ -3,6 +3,7 @@
   border-radius: 18px;
   display: inline-block;
   position: relative;
+  z-index: 9999999 !important;
 
   &:hover {
     border-radius: 18px 18px 0 0;
@@ -56,6 +57,7 @@
     transform: translateX(-50%);
     width: 100%;
     overflow: hidden;
+    z-index: 9999999999 !important;
 
     opacity: 0;
     visibility: hidden;

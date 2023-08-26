@@ -6,8 +6,11 @@ import { BiSolidDollarCircle } from "react-icons/bi";
 import { SocialLinks } from "../index";
 import { BsGlobe } from "react-icons/bs";
 import { SelectComponent } from "../";
+import { useNavigate } from "react-router-dom";
 
 const HeaderTop = () => {
+  const navigate = useNavigate();
+
   const topSelectValues = [
     ["Language", "uz", "ru", "en"],
     ["Currency", "$"],
@@ -41,7 +44,7 @@ const HeaderTop = () => {
               <FaLocationDot />
               Track Order
             </button>
-            <button>
+            <button onClick={() => navigate("/shop")}>
               <AiOutlineShop />
               Shop
             </button>
