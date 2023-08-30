@@ -1,8 +1,7 @@
 .container {
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
-  max-width: 1440px;
 }
 
 *,
@@ -12,6 +11,10 @@
   margin: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0 !important;
 }
 
 ul {
@@ -341,4 +344,307 @@ template {
    */
 [hidden] {
   display: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  transition: 1s;
+  width: 2em !important;
+  border-radius: 1em !important;
+}
+
+.hero-carousel-wrapper {
+  font-size: 15px;
+  width: auto;
+  background: linear-gradient(225deg, #f2fff7 0%, #c3f4ff 100%);
+  padding-bottom: 2em;
+}
+
+.hero-carousel {
+  width: 100%;
+  min-height: 600px;
+  background-position: right;
+  background-size: 60em 40em;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-carousel-context {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-carousel-context p {
+  padding-left: 1em;
+  width: 80%;
+  color: #1d232c;
+  font-family: Roboto;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.hero-carousel-context p span {
+  color: #1d232c;
+  font-family: Roboto;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.hero-carousel-context__herobtn {
+  background-color: #319dff;
+  padding: 0.5em 1em;
+  border-radius: 1.3em;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1340px) {
+  .hero-carousel-wrapper {
+    font-size: 15px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1320px) {
+  .hero-carousel-wrapper {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1061px) {
+  .hero-carousel-wrapper {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .hero-carousel-wrapper {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .hero-carousel-wrapper {
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-carousel-wrapper {
+    font-size: 7px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-carousel-wrapper {
+    font-size: 6px;
+  }
+  .hero-carousel {
+    background-position: top;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .hero-carousel-context p {
+    width: auto;
+    font-size: 4.5em;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+.productImageZoom-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+
+.productImageZoom-header__btn {
+  border-radius: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1.1em;
+  outline: none;
+}
+
+.productImageZoom-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.productImageZoom-body-slider {
+  max-width: 1100px;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mySwiper-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: auto;
+}
+
+.mySwiper_image_wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.productImageZoom-body-controllers {
+  overflow: auto;
+  position: absolute;
+  left: 0em;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  row-gap: 10px;
+  height: 100%;
+}
+
+.productImageZoom-body-controller {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  padding: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.productImageZoom-body-controller--active {
+  border: 1px solid #319dff;
+}
+
+.productImageZoom-body-controller img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.productImageZoom-footer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-top: 50px;
+}
+
+.productImageZoom-footer-zoombtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  position: absolute;
+  left: 47%;
+}
+
+.productImageZoom-footer-zoombtns button {
+  border-radius: 20px;
+  border: 1px solid #eef0f4;
+  background: #fff;
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+}
+
+.productImageZoom-footer__addToCartbtns, .productImageZoom-footer__wishlist, .productImageZoom-footer__compare, .productImageZoom-footer__addToCart {
+  border-radius: 60px;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+
+.productImageZoom-footer__addToCart {
+  background-color: #319dff;
+  color: #fff;
+  border: none;
+}
+
+.productImageZoom-footer__compare {
+  background-color: transparent;
+  border-color: #586a84;
+}
+
+.productImageZoom-footer__wishlist {
+  border-color: #586a84;
+  background-color: transparent;
+}
+
+.productImageZoom-body-small {
+  display: none;
+}
+
+@media only screen and (max-width: 1290px) {
+  .productImageZoom-body-controllers {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .productImageZoom-footer {
+    padding-top: 0px;
+  }
+  .productImageZoom-footer-zoombtns {
+    display: none;
+  }
+  .productImageZoom_body_controllers--large {
+    display: none;
+  }
+  .productImageZoom-body-slider--large {
+    display: none;
+  }
+  .productImageZoom_body {
+    height: 600px;
+  }
+  .productImageZoom-body-small img {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .productImageZoom-body-small {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .productImageZoom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+  }
+  .productImageZoom-body {
+    max-height: 700px;
+  }
+  .productImageZoom-footer {
+    justify-content: center;
+  }
+  .poroductImageZoom-addToCartbtn {
+    font-size: 8px;
+  }
 }/*# sourceMappingURL=index.css.map */
