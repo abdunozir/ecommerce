@@ -9,13 +9,14 @@
   border-radius: 1em !important;
 }
 
-.hero_carousel_wrapper {
+.hero-carousel-wrapper {
   font-size: 15px;
   width: auto;
   background: linear-gradient(225deg, #f2fff7 0%, #c3f4ff 100%);
+  padding-bottom: 2em;
 }
 
-.hero_carousel {
+.hero-carousel {
   width: 100%;
   min-height: 600px;
   background-position: right;
@@ -26,9 +27,17 @@
   justify-content: flex-start;
 }
 
-.hero_carousel p {
-  padding-left: 1em;
+.hero-carousel-context {
   width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-carousel-context p {
+  padding-left: 1em;
+  width: 80%;
   color: #1d232c;
   font-family: Roboto;
   font-size: 3em;
@@ -36,7 +45,7 @@
   font-weight: 300;
   line-height: normal;
 }
-.hero_carousel p span {
+.hero-carousel-context p span {
   color: #1d232c;
   font-family: Roboto;
   font-size: 1em;
@@ -45,44 +54,54 @@
   line-height: normal;
 }
 
+.hero-carousel-context__herobtn {
+  background-color: #319dff;
+  padding: 0.5em 1em;
+  border-radius: 1.3em;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3em;
+  cursor: pointer;
+}
 // mediaquery
 
 @include mediaQueries(1340px) {
-  .hero_carousel_wrapper {
+  .hero-carousel-wrapper {
     font-size: 15px;
     padding: 0;
   }
 }
 @include mediaQueries(1320px) {
-  .hero_carousel_wrapper {
+  .hero-carousel-wrapper {
     font-size: 13px;
   }
 }
 @include mediaQueries(1061px) {
-  .hero_carousel_wrapper {
+  .hero-carousel-wrapper {
     font-size: 12px;
   }
 }
 @include mediaQueries($xl) {
-  .hero_carousel_wrapper {
+  .hero-carousel-wrapper {
     font-size: 11px;
   }
 }
 @include mediaQueries($xl) {
-  .hero_carousel_wrapper {
+  .hero-carousel-wrapper {
     font-size: 9px;
   }
 }
 @include mediaQueries($md) {
-  .hero_carousel_wrapper {
+  .hero-carousel-wrapper {
     font-size: 7px;
   }
 }
 @include mediaQueries($sm) {
-  .hero_carousel_wrapper {
+  .hero-carousel-wrapper {
     font-size: 6px;
   }
-  .hero_carousel {
+  .hero-carousel {
     background-position: top;
     justify-content: center;
     align-items: end;
@@ -90,7 +109,7 @@
     font-size: 1.5em;
   }
 
-  .hero_carousel p {
+  .hero-carousel-context p {
     width: auto;
     font-size: 4.5em;
     padding-left: 0;
