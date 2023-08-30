@@ -1,0 +1,64 @@
+@import "../../base/variables";
+
+.categories {
+  background-color: #319dff;
+  display: block;
+
+  .select-boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .select-box {
+      div {
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border-right: 1px solid #0077e4;
+
+        ul {
+          border-radius: 0 !important;
+        }
+
+        h1 {
+          border-radius: 0 !important;
+          color: #fff !important;
+
+          &:hover {
+            background-color: #2093ff;
+          }
+
+          &::after {
+            border-color: #fff transparent transparent transparent;
+          }
+        }
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+// Media Query
+
+@media (max-width: $lg) {
+  .select-boxes {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    column-gap: 35px;
+
+    .select-box {
+      border: none;
+      select {
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .select-boxes {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}

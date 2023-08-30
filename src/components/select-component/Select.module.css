@@ -1,0 +1,67 @@
+.selectBox {
+  box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+  display: inline-block;
+  position: relative;
+  z-index: 9999999 !important;
+}
+.selectBox:hover {
+  border-radius: 18px 18px 0 0;
+}
+.selectBox:hover .selectMenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  top: 100%;
+}
+.selectBox h1 {
+  margin: 0;
+  font-size: 14px;
+  border-radius: 18px;
+  display: inline-block;
+  color: #586a84;
+  padding: 7px 36px 7px 12px;
+  text-transform: capitalize;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.selectBox h1:hover {
+  background-color: #e5f3ff;
+  border-radius: 18px 18px 0 0;
+}
+.selectBox h1::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 4px;
+  border-color: black transparent transparent transparent;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-25%);
+}
+.selectBox .selectMenu {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 18px 18px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  overflow: hidden;
+  z-index: 9999999999 !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s, visibility 0.2s, top 0.2s ease-in-out;
+}
+.selectBox .selectMenu_item {
+  color: #586a84;
+  font-size: 14px;
+  padding: 6px 20px 6px 6px;
+  cursor: pointer;
+}
+.selectBox .selectMenu_item:hover {
+  background-color: #e5f3ff;
+}/*# sourceMappingURL=Select.module.css.map */

@@ -1,0 +1,29 @@
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.social-links .social-link {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+.social-links .social-link a {
+  color: #808080;
+  transition: color 0.2s ease;
+}
+.social-links .social-link:nth-child(1):hover a {
+  color: royalblue;
+}
+.social-links .social-link:nth-child(2):hover a {
+  color: red;
+}
+.social-links .social-link:nth-child(3):hover a {
+  color: rgb(4, 112, 253);
+}
+.social-links .social-link:nth-child(4):hover a {
+  color: rgb(0, 152, 240);
+}
+.social-links .social-link:nth-child(5):hover a {
+  color: red;
+}/*# sourceMappingURL=socialLinks.css.map */

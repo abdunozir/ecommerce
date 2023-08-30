@@ -1,0 +1,88 @@
+@import "../base/variables";
+
+.shop-section {
+  margin: 40px 0;
+
+  .productsBox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    min-height: 600px;
+    position: relative;
+    padding-bottom: 80px;
+
+    .products {
+      width: 100%;
+      max-height: 400px;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      li {
+        background-color: #eef0f4;
+        border-radius: 50%;
+        font-size: 12px;
+
+        a {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        &.selected {
+          background-color: #319dff;
+          color: #fff;
+        }
+
+        &:last-child {
+          background-color: transparent;
+        }
+        &:first-child {
+          background-color: transparent;
+        }
+
+        button {
+          background-color: transparent;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          transition: transform 0.1s ease-in;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .productsBox {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: $md) {
+  .productsBox {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: $sm) {
+  .productsBox {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
